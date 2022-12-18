@@ -1,6 +1,7 @@
 import './App.css';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
+import { MdRadio} from "react-icons/md";
 import { DATA } from './Data';
 import { useState } from 'react';
 
@@ -15,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1> Turkish Radio Station  </h1>
+        <h1> Turkish Radio Station <MdRadio className='radio'/> </h1>
       </header>
 
       <div className="radio-flex">
@@ -34,6 +35,7 @@ function App() {
         <AudioPlayer
           autoPlay
           src={url}
+          showJumpControls={false}
           onPlay={e => console.log("onPlay")}
         />
       </div>
